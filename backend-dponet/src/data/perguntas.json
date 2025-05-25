@@ -1,0 +1,1652 @@
+[
+  {
+    "id": 1,
+    "nivel": "iniciante",
+    "pilar_id": 1,
+    "pergunta": "Você sabe o que significa LGPD e por que ela é importante?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nivel": "iniciante",
+    "pilar_id": 1,
+    "pergunta": "A sua empresa informa aos clientes sobre o uso de dados pessoais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nivel": "iniciante",
+    "pilar_id": 1,
+    "pergunta": "Existe algum responsável por dados pessoais na empresa, mesmo que não formalizado como DPO?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nivel": "iniciante",
+    "pilar_id": 1,
+    "pergunta": "Você já ouviu falar sobre dados sensíveis e dados pessoais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nivel": "iniciante",
+    "pilar_id": 1,
+    "pergunta": "Sua empresa coleta dados como nome e e-mail sem saber que isso é regulado pela LGPD?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nivel": "iniciante",
+    "pilar_id": 2,
+    "pergunta": "Você sabe o que é consentimento na LGPD?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nivel": "iniciante",
+    "pilar_id": 2,
+    "pergunta": "Existe algum documento que fale sobre proteção de dados na empresa?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nivel": "iniciante",
+    "pilar_id": 2,
+    "pergunta": "A empresa já enfrentou dúvidas sobre uso de dados de clientes?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nivel": "iniciante",
+    "pilar_id": 2,
+    "pergunta": "Você sabe por quanto tempo pode armazenar dados pessoais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nivel": "iniciante",
+    "pilar_id": 2,
+    "pergunta": "Sabe dizer se sua empresa já excluiu dados a pedido de alguém?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nivel": "iniciante",
+    "pilar_id": 3,
+    "pergunta": "Seus colegas sabem o que é LGPD?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nivel": "iniciante",
+    "pilar_id": 3,
+    "pergunta": "Sua empresa coleta dados de menores de idade?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nivel": "iniciante",
+    "pilar_id": 3,
+    "pergunta": "Existe uma política de privacidade no site da sua empresa?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "nivel": "iniciante",
+    "pilar_id": 3,
+    "pergunta": "Você sabe que dados pessoais incluem CPF, telefone, e-mail, etc?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "nivel": "iniciante",
+    "pilar_id": 3,
+    "pergunta": "Sua empresa usa planilhas para armazenar dados de clientes?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "nivel": "iniciante",
+    "pilar_id": 4,
+    "pergunta": "Você já foi treinado(a) para lidar com dados pessoais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "nivel": "iniciante",
+    "pilar_id": 4,
+    "pergunta": "Sabe o que fazer se um cliente pedir para ver os dados que a empresa tem sobre ele?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "nivel": "iniciante",
+    "pilar_id": 4,
+    "pergunta": "Sua empresa já recebeu perguntas sobre privacidade dos clientes?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "nivel": "iniciante",
+    "pilar_id": 4,
+    "pergunta": "A empresa avisa que usa cookies no site?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "nivel": "iniciante",
+    "pilar_id": 4,
+    "pergunta": "Seus sistemas têm senha segura para acesso aos dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "nivel": "iniciante",
+    "pilar_id": 5,
+    "pergunta": "Você sabe quem pode acessar os dados dos clientes na empresa?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "nivel": "iniciante",
+    "pilar_id": 5,
+    "pergunta": "Você sabia que compartilhar dados sem permissão pode ser ilegal?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "nivel": "iniciante",
+    "pilar_id": 5,
+    "pergunta": "A empresa avisa por que coleta certos dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "nivel": "iniciante",
+    "pilar_id": 5,
+    "pergunta": "Seus colegas costumam falar de segurança da informação?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "nivel": "iniciante",
+    "pilar_id": 5,
+    "pergunta": "Você já viu alguma campanha interna sobre proteção de dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "nivel": "intermediario",
+    "pilar_id": 1,
+    "pergunta": "Sua empresa já realizou um mapeamento de dados pessoais armazenados e processados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "nivel": "intermediario",
+    "pilar_id": 1,
+    "pergunta": "Os contratos com terceiros incluem cláusulas de proteção de dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "nivel": "intermediario",
+    "pilar_id": 1,
+    "pergunta": "Existem procedimentos documentados para atender solicitações de titulares de dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "nivel": "intermediario",
+    "pilar_id": 1,
+    "pergunta": "A empresa revisa regularmente sua política de privacidade?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "nivel": "intermediario",
+    "pilar_id": 1,
+    "pergunta": "Seus sistemas estão protegidos por autenticação em dois fatores?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "nivel": "intermediario",
+    "pilar_id": 2,
+    "pergunta": "A empresa tem uma política de controle de acesso baseada em cargos?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "nivel": "intermediario",
+    "pilar_id": 2,
+    "pergunta": "Os funcionários assinam termo de confidencialidade sobre dados pessoais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "nivel": "intermediario",
+    "pilar_id": 2,
+    "pergunta": "Existe algum processo formal para reportar incidentes com dados pessoais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "nivel": "intermediario",
+    "pilar_id": 2,
+    "pergunta": "Os backups são criptografados e armazenados em local seguro?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "nivel": "intermediario",
+    "pilar_id": 2,
+    "pergunta": "A empresa realiza campanhas periódicas de conscientização sobre privacidade?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "nivel": "intermediario",
+    "pilar_id": 3,
+    "pergunta": "Há alguma métrica para avaliar maturidade em proteção de dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "nivel": "intermediario",
+    "pilar_id": 3,
+    "pergunta": "O processo de exclusão de dados pessoais é validado e auditável?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "nivel": "intermediario",
+    "pilar_id": 3,
+    "pergunta": "A empresa compartilha dados com base em legítimo interesse?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "nivel": "intermediario",
+    "pilar_id": 3,
+    "pergunta": "Foram feitos testes de segurança (como pentest) nos últimos 12 meses?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "nivel": "intermediario",
+    "pilar_id": 3,
+    "pergunta": "Os sistemas registram logs de acesso aos dados pessoais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "nivel": "intermediario",
+    "pilar_id": 4,
+    "pergunta": "Há controle sobre o ciclo de vida dos dados pessoais (da coleta à exclusão)?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "nivel": "intermediario",
+    "pilar_id": 4,
+    "pergunta": "A empresa mantém um inventário atualizado de dados coletados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "nivel": "intermediario",
+    "pilar_id": 4,
+    "pergunta": "É possível rastrear quais dados foram coletados de cada usuário?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "nivel": "intermediario",
+    "pilar_id": 4,
+    "pergunta": "Existe procedimento de revisão de consentimentos antigos?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "nivel": "intermediario",
+    "pilar_id": 4,
+    "pergunta": "Os fornecedores passam por due diligence de LGPD?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "nivel": "intermediario",
+    "pilar_id": 5,
+    "pergunta": "As bases legais utilizadas são revisadas periodicamente?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "nivel": "intermediario",
+    "pilar_id": 5,
+    "pergunta": "A empresa já conduziu treinamentos intermediários sobre LGPD?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "nivel": "intermediario",
+    "pilar_id": 5,
+    "pergunta": "Há uma análise de risco documentada sobre tratamento de dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "nivel": "intermediario",
+    "pilar_id": 5,
+    "pergunta": "A empresa já respondeu a alguma fiscalização ou notificação da ANPD?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "nivel": "intermediario",
+    "pilar_id": 5,
+    "pergunta": "Há planos de contingência para falhas de segurança relacionadas a dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "nivel": "avancado",
+    "pilar_id": 1,
+    "pergunta": "Sua empresa realiza Data Protection Impact Assessments (DPIA) antes de iniciar novos projetos?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "nivel": "avancado",
+    "pilar_id": 1,
+    "pergunta": "Os dados são anonimizados ou pseudonimizados quando possível?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "nivel": "avancado",
+    "pilar_id": 1,
+    "pergunta": "Existe um Comitê de Privacidade e Proteção de Dados ativo na organização?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "nivel": "avancado",
+    "pilar_id": 1,
+    "pergunta": "A empresa já conduziu auditorias independentes de conformidade com LGPD?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "nivel": "avancado",
+    "pilar_id": 1,
+    "pergunta": "Os fornecedores utilizam normas ISO ou frameworks reconhecidos de segurança?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.68,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.2,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "nivel": "avancado",
+    "pilar_id": 2,
+    "pergunta": "Os sistemas da empresa estão integrados para garantir rastreabilidade total dos dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "nivel": "avancado",
+    "pilar_id": 2,
+    "pergunta": "Há segregação de dados sensíveis com controles específicos em todos os sistemas?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "nivel": "avancado",
+    "pilar_id": 2,
+    "pergunta": "A empresa realiza revisão automatizada das permissões de acesso?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "nivel": "avancado",
+    "pilar_id": 2,
+    "pergunta": "Existe uma equipe dedicada exclusivamente à governança de dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "nivel": "avancado",
+    "pilar_id": 2,
+    "pergunta": "A empresa possui certificações em proteção de dados (ex: ISO 27701)?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "nivel": "avancado",
+    "pilar_id": 3,
+    "pergunta": "Há integração entre a área de proteção de dados e o jurídico para decisões estratégicas?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "nivel": "avancado",
+    "pilar_id": 3,
+    "pergunta": "Todos os contratos com controladores e operadores passam por análise de privacidade?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "nivel": "avancado",
+    "pilar_id": 3,
+    "pergunta": "Existe uma política de segurança para dispositivos móveis (BYOD)?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "nivel": "avancado",
+    "pilar_id": 3,
+    "pergunta": "A empresa monitora indicadores de desempenho em privacidade (KPIs)?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "nivel": "avancado",
+    "pilar_id": 3,
+    "pergunta": "As campanhas de conscientização são gamificadas ou personalizadas por área?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.6,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 4.0,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "nivel": "avancado",
+    "pilar_id": 4,
+    "pergunta": "Há investimento contínuo em novas tecnologias de segurança da informação?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "nivel": "avancado",
+    "pilar_id": 4,
+    "pergunta": "A empresa possui estrutura para responder a solicitações internacionais de titulares?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "nivel": "avancado",
+    "pilar_id": 4,
+    "pergunta": "Existe governança sobre dados processados por inteligência artificial?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "nivel": "avancado",
+    "pilar_id": 4,
+    "pergunta": "A empresa realiza treinamentos avançados com simulações de incidentes reais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "nivel": "avancado",
+    "pilar_id": 4,
+    "pergunta": "Os dados arquivados são periodicamente revistos e excluídos conforme política?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.52,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.8,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "nivel": "avancado",
+    "pilar_id": 5,
+    "pergunta": "A gestão de consentimento é realizada via sistemas com interface para titulares?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "nivel": "avancado",
+    "pilar_id": 5,
+    "pergunta": "Há políticas distintas para dados estruturados e não estruturados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "nivel": "avancado",
+    "pilar_id": 5,
+    "pergunta": "A empresa possui plano de continuidade de negócios com foco em dados pessoais?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "nivel": "avancado",
+    "pilar_id": 5,
+    "pergunta": "A anonimização é validada tecnicamente por especialistas?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "nivel": "avancado",
+    "pilar_id": 5,
+    "pergunta": "A empresa já recebeu selos de boas práticas em proteção de dados?",
+    "opcoes": [
+      {
+        "resposta": "Sim",
+        "pontos": 0
+      },
+      {
+        "resposta": "Parcialmente",
+        "pontos": 1.44,
+        "melhoria": "Rever e melhorar essa área."
+      },
+      {
+        "resposta": "Não",
+        "pontos": 3.6,
+        "melhoria": "Implementar ações para atender a LGPD."
+      }
+    ]
+  }
+]
