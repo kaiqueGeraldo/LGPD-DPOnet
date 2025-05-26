@@ -111,14 +111,16 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
       const data = await res.json();
 
-      setRespostas((prev) => [
-        ...prev,
-        {
-          pergunta_id: pergunta.id,
-          resposta: resposta,
-          pergunta: pergunta.pergunta,
-        },
-      ]);
+      const novaResposta = {
+        pergunta_id: pergunta.id,
+        resposta: resposta,
+        pergunta: pergunta.pergunta,
+      };
+
+      setRespostas((prev) => [...prev, novaResposta]);
+
+      // Usa a lista atual + nova resposta
+      const respostasAtualizadas = [...respostas, novaResposta];
 
       if (data.mensagem === "Todas as perguntas foram respondidas!") {
         const resultadoRes = await fetch(`${URL_BASE}/resultado`, {
@@ -133,8 +135,8 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
           "resultadoFinal",
           JSON.stringify({
             ...resultadoData.resultado,
-            respostas,
-            perguntas: respostas.map((r) => ({
+            respostas: respostasAtualizadas,
+            perguntas: respostasAtualizadas.map((r) => ({
               id: r.pergunta_id,
               pergunta: r.pergunta,
             })),
