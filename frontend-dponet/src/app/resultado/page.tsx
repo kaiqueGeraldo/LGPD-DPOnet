@@ -47,7 +47,7 @@ export default function Resultado() {
   const [resultado, setResultado] = useState<ResultadoData | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [pilarSelecionado, setPilarSelecionado] = useState<string | null>(null);
-  const URL_BASE = "http://localhost:3005/api";
+  const URL_BASE = process.env.URL;
 
   useEffect(() => {
     const resultadoSalvo = localStorage.getItem("resultadoFinal");

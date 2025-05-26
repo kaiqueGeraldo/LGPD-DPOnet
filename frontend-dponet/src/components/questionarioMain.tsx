@@ -20,7 +20,7 @@ interface Pergunta {
 }
 
 const TOTAL_PERGUNTAS = 25;
-const URL_BASE = "http://localhost:3005/api";
+const URL_BASE = process.env.URL;
 
 const PILARES: Record<number, string> = {
   1: "Governança",
