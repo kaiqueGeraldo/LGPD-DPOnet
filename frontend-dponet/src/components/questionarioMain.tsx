@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Box, LinearProgress, Typography } from "@mui/material";
 import { Loader2 } from "lucide-react";
 import { labels } from "@/utils/nivelLabels";
+import { obterToken, salvarToken, removerToken } from "@/utils/auth";
 import { URL_BASE } from "@/utils/url_base";
 
 interface Opcao {
@@ -51,13 +52,20 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
   const iniciarQuestionario = async (nivelAtual: string) => {
     try {
-      await fetch(`${URL_BASE}/iniciar`, {
+      const res = await fetch(`${URL_BASE}/iniciar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        credentials: "include",
         body: JSON.stringify({ nivel: nivelAtual }),
       });
-      buscarPergunta();
+
+      const data = await res.json();
+
+      if (data.token) {
+        salvarToken(data.token);
+        buscarPergunta();
+      } else {
+        console.error("Token não recebido");
+      }
     } catch (err) {
       console.error("Erro ao iniciar questionário:", err);
     }
@@ -65,10 +73,14 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
   const buscarPergunta = async () => {
     try {
+      const token = obterToken();
       const res = await fetch(`${URL_BASE}/pergunta`, {
         method: "GET",
-        credentials: "include",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
+
       const data = await res.json();
       if (data.mensagem) {
         router.push("/resultado");
@@ -85,14 +97,15 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
   const handleResponder = async () => {
     if (!resposta || !pergunta) return;
+
     try {
+      const token = obterToken();
       const res = await fetch(`${URL_BASE}/responder`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
+          Authorization: `Bearer ${token}`,
         },
-        credentials: "include",
         body: JSON.stringify({ resposta }),
       });
 
@@ -109,8 +122,10 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
       if (data.mensagem === "Todas as perguntas foram respondidas!") {
         const resultadoRes = await fetch(`${URL_BASE}/resultado`, {
-          method: "POST",
-          credentials: "include",
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         });
         const resultadoData = await resultadoRes.json();
 
@@ -127,8 +142,8 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
           })
         );
 
+        removerToken();
         router.push("/resultado");
-        return;
       } else {
         setNumeroPergunta((prev) => prev + 1);
         setResposta(null);

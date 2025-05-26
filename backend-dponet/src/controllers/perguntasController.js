@@ -1,13 +1,24 @@
 const { calcularPontuacao } = require('../services/calculoPontuacao');
 const perguntas = require('../data/perguntas.json');
 const { gerarPdfQuestionario } = require('../utils/pdfUtil');
+const { gerarToken, verificarToken } = require('../utils/jwtUtil');
 
-// Retorna todas as perguntas do JSON
+// Helper para pegar dados do token
+function getDadosToken(req) {
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return null;
+    }
+    const token = authHeader.split(' ')[1];
+    return verificarToken(token);
+}
+
+// Retorna todas as perguntas
 exports.getTodasPerguntas = (req, res) => {
     res.json(perguntas);
 };
 
-// Iniciar o questionário com base no nível escolhido
+// Iniciar o questionário
 exports.iniciarQuestionario = (req, res) => {
     const { nivel } = req.body;
 
@@ -15,116 +26,94 @@ exports.iniciarQuestionario = (req, res) => {
         return res.status(400).json({ mensagem: 'Nível inválido.' });
     }
 
-    req.session.nivel = nivel;
-    req.session.perguntaIndex = 0;
-    req.session.respostas = [];
+    const token = gerarToken({
+        nivel,
+        perguntaIndex: 0,
+        respostas: []
+    });
 
-    res.json({ mensagem: `Questionário iniciado no nível ${nivel}.` });
+    res.json({ mensagem: `Questionário iniciado no nível ${nivel}.`, token });
 };
 
-// Retorna a próxima pergunta com base no nível selecionado
+// Retorna a pergunta atual
 exports.getPerguntaAtual = (req, res) => {
-    const nivel = req.session.nivel;
-    if (!nivel) {
-        return res.status(400).json({ mensagem: 'Nível não selecionado.' });
+    const dados = getDadosToken(req);
+    if (!dados) {
+        return res.status(401).json({ mensagem: 'Token inválido ou ausente.' });
     }
 
+    const { nivel, perguntaIndex = 0 } = dados;
     const perguntasFiltradas = perguntas.filter(p => p.nivel === nivel);
-    const index = req.session.perguntaIndex || 0;
 
-    if (index >= perguntasFiltradas.length) {
+    if (perguntaIndex >= perguntasFiltradas.length) {
         return res.json({ mensagem: "Todas as perguntas foram respondidas!" });
     }
 
-    res.json({ ...perguntasFiltradas[index], index: index + 1 });
+    res.json({ ...perguntasFiltradas[perguntaIndex], index: perguntaIndex + 1 });
 };
 
-// Salva a resposta da pergunta atual e avança para a próxima
+// Responder pergunta
 exports.responderPergunta = (req, res) => {
-    const { resposta } = req.body;
-
-    // Se a sessão não estiver inicializada, inicializa
-    if (typeof req.session.perguntaIndex === "undefined") {
-        req.session.perguntaIndex = 0;
-        req.session.respostas = [];
+    const dados = getDadosToken(req);
+    if (!dados) {
+        return res.status(401).json({ mensagem: 'Token inválido ou ausente.' });
     }
 
-    const { nivel } = req.session;
-    const perguntasFiltradas = perguntas.filter(p => p.nivel === nivel);
-    const index = req.session.perguntaIndex;
+    const { resposta } = req.body;
+    const { nivel, perguntaIndex = 0, respostas = [] } = dados;
 
-    // Verifica se a pergunta atual existe
-    if (!perguntasFiltradas[index]) {
+    const perguntasFiltradas = perguntas.filter(p => p.nivel === nivel);
+
+    if (!perguntasFiltradas[perguntaIndex]) {
         return res.status(400).json({ mensagem: "Todas as perguntas foram respondidas!" });
     }
 
-    const perguntaAtual = perguntasFiltradas[index];
+    const perguntaAtual = perguntasFiltradas[perguntaIndex];
 
-    console.log("Recebida resposta:", resposta);
-    console.log("Pergunta ID:", perguntaAtual.id);
-    console.log("Índice da sessão antes:", index);
+    const novasRespostas = [...respostas, { pergunta_id: perguntaAtual.id, resposta }];
+    const novoIndex = perguntaIndex + 1;
 
-    // Salva a resposta da pergunta atual
-    req.session.respostas.push({ pergunta_id: perguntaAtual.id, resposta });
-    req.session.perguntaIndex++; // Avança para a próxima pergunta
-
-    console.log("Índice da sessão depois:", req.session.perguntaIndex);
-    console.log("respostas length:", req.session.respostas.length);
-
-    req.session.save((err) => {
-        if (err) {
-            console.error("Erro ao salvar sessão:", err);
-            return res.status(500).json({ mensagem: "Erro ao salvar progresso da sessão." });
-        }
-
-        // Verifica se ainda há perguntas a serem respondidas
-        if (req.session.perguntaIndex < perguntasFiltradas.length) {
-            res.json({ proximaPergunta: perguntasFiltradas[req.session.perguntaIndex] });
-        } else {
-            res.json({ mensagem: "Todas as perguntas foram respondidas!" });
-        }
-    });
-};
-
-// Calcula o resultado final após todas as respostas
-exports.calcularResultado = (req, res) => {
-    try {
-        console.log("Sessão no /resultado:", req.session);
-
-        const { respostas, nivel } = req.session;
-
-        if (!respostas || !nivel) {
-            return res.status(400).json({ mensagem: "Dados insuficientes para calcular o resultado." });
-        }
-
-        const perguntasFiltradas = perguntas.filter(p => p.nivel === nivel);
-
-        if (respostas.length < perguntasFiltradas.length) {
-            return res.status(400).json({
-                mensagem: `Ainda há perguntas pendentes. Respondeu ${respostas.length} de ${perguntasFiltradas.length}.`
-            });
-        }
-
-        const resultado = calcularPontuacao(respostas, nivel);
-
-        if (resultado.mensagem) {
-            return res.status(400).json({ mensagem: resultado.mensagem });
-        }
-
-        req.session.destroy((err) => {
-            if (err) {
-                console.error("Erro ao destruir sessão:", err);
-                return res.status(500).json({ mensagem: "Erro ao finalizar a sessão." });
-            }
-
-            res.json({ resultado });
+    if (novoIndex < perguntasFiltradas.length) {
+        const novoToken = gerarToken({ nivel, perguntaIndex: novoIndex, respostas: novasRespostas });
+        res.json({
+            proximaPergunta: perguntasFiltradas[novoIndex],
+            token: novoToken
         });
-    } catch (error) {
-        console.error("Erro ao calcular resultado:", error);
-        res.status(500).json({ mensagem: "Erro interno ao processar a pontuação." });
+    } else {
+        const novoToken = gerarToken({ nivel, perguntaIndex: novoIndex, respostas: novasRespostas });
+        res.json({
+            mensagem: "Todas as perguntas foram respondidas!",
+            token: novoToken
+        });
     }
 };
 
+// Calcular resultado
+exports.calcularResultado = (req, res) => {
+    const dados = getDadosToken(req);
+    if (!dados) {
+        return res.status(401).json({ mensagem: 'Token inválido ou ausente.' });
+    }
+
+    const { nivel, respostas = [], perguntaIndex } = dados;
+    const perguntasFiltradas = perguntas.filter(p => p.nivel === nivel);
+
+    if (respostas.length < perguntasFiltradas.length) {
+        return res.status(400).json({
+            mensagem: `Ainda há perguntas pendentes. Respondeu ${respostas.length} de ${perguntasFiltradas.length}.`
+        });
+    }
+
+    const resultado = calcularPontuacao(respostas, nivel);
+
+    if (resultado.mensagem) {
+        return res.status(400).json({ mensagem: resultado.mensagem });
+    }
+
+    res.json({ resultado });
+};
+
+// Gerar PDF
 exports.gerarPDFRespostas = (req, res) => {
     const { respostas, perguntas, nivel } = req.body;
 
