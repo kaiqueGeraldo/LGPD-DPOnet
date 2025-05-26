@@ -6,6 +6,7 @@ import { Loader2 } from "lucide-react";
 import { CircularProgress } from "@mui/material";
 import clsx from "clsx";
 import { labels } from "@/utils/nivelLabels";
+import { URL_BASE } from "@/utils/url_base";
 
 interface PilarDetalhe {
   defasagem: number;
@@ -52,7 +53,6 @@ export default function Resultado() {
   const [resultado, setResultado] = useState<ResultadoData | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [pilarSelecionado, setPilarSelecionado] = useState<string | null>(null);
-  const URL_BASE = process.env.NEXT_PUBLIC_URL;
 
   useEffect(() => {
     const resultadoSalvo = localStorage.getItem("resultadoFinal");
@@ -71,7 +71,7 @@ export default function Resultado() {
 
     const resultado = JSON.parse(resultadoSalvo);
 
-    const response = await fetch(`${URL_BASE}/api/pdf`, {
+    const response = await fetch(`${URL_BASE}/pdf`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

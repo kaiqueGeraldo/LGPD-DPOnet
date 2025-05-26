@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Box, LinearProgress, Typography } from "@mui/material";
 import { Loader2 } from "lucide-react";
 import { labels } from "@/utils/nivelLabels";
+import { URL_BASE } from "@/utils/url_base";
 
 interface Opcao {
   resposta: string;
@@ -20,7 +21,6 @@ interface Pergunta {
 }
 
 const TOTAL_PERGUNTAS = 25;
-const URL_BASE = process.env.NEXT_PUBLIC_URL;
 
 const PILARES: Record<number, string> = {
   1: "Governança",
@@ -51,7 +51,7 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
   const iniciarQuestionario = async (nivelAtual: string) => {
     try {
-      await fetch(`${URL_BASE}/api/iniciar`, {
+      await fetch(`${URL_BASE}/iniciar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -65,7 +65,7 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
   const buscarPergunta = async () => {
     try {
-      const res = await fetch(`${URL_BASE}/api/pergunta`, {
+      const res = await fetch(`${URL_BASE}/pergunta`, {
         method: "GET",
         credentials: "include",
       });
@@ -86,7 +86,7 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
   const handleResponder = async () => {
     if (!resposta || !pergunta) return;
     try {
-      const res = await fetch(`${URL_BASE}/api/responder`, {
+      const res = await fetch(`${URL_BASE}/responder`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
       ]);
 
       if (data.mensagem === "Todas as perguntas foram respondidas!") {
-        const resultadoRes = await fetch(`${URL_BASE}/api/resultado`, {
+        const resultadoRes = await fetch(`${URL_BASE}/resultado`, {
           method: "POST",
           credentials: "include",
         });
