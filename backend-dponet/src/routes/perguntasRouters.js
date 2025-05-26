@@ -11,6 +11,6 @@ router.post('/pdf', perguntasController.gerarPDFRespostas);       // Gera PDF
 // Rotas protegidas
 router.get('/pergunta', middleware, perguntasController.getPerguntaAtual);   // Retorna a pergunta atual
 router.post('/responder', middleware, perguntasController.responderPergunta); // Salva resposta e avança
-router.get('/resultado', middleware, perguntasController.calcularResultado);  // Calcula resultado final
+router.post('/resultado', middleware, perguntasController.calcularResultado);  // Calcula resultado final
 
 module.exports = router;

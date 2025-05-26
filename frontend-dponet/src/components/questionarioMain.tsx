@@ -124,7 +124,7 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
       if (data.mensagem === "Todas as perguntas foram respondidas!") {
         const resultadoRes = await fetch(`${URL_BASE}/resultado`, {
-          method: "GET",
+          method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
           },
