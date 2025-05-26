@@ -26,7 +26,7 @@ export default function SelecaoNivel({ onSelecionar }: SelecaoNivelProps) {
             key={nivel}
             onClick={() => onSelecionar(nivel)}
             className="px-8 py-4 rounded-xl text-lg font-semibold transition duration-300
-              bg-[#bec7fa] text-[#1b1785] hover:bg-[#7a86e2] hover:scale-105 shadow-lg"
+              bg-[#bec7fa] text-[#1b1785] hover:bg-[#7a86e2] hover:scale-105 shadow-lg cursor-pointer"
           >
             {labels[nivel]}
           </button>

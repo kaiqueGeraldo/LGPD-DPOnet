@@ -95,7 +95,12 @@ exports.calcularResultado = (req, res) => {
         return res.status(401).json({ mensagem: 'Token inválido ou ausente.' });
     }
 
-    const { nivel, respostas = [], perguntaIndex } = dados;
+    const { nivel, respostas = [] } = dados;
+
+    if (!nivel || !Array.isArray(respostas)) {
+        return res.status(400).json({ mensagem: 'Dados incompletos no token.' });
+    }
+
     const perguntasFiltradas = perguntas.filter(p => p.nivel === nivel);
 
     if (respostas.length < perguntasFiltradas.length) {
@@ -110,8 +115,16 @@ exports.calcularResultado = (req, res) => {
         return res.status(400).json({ mensagem: resultado.mensagem });
     }
 
-    res.json({ resultado });
+    // Enviar risco e detalhes dos pilares no corpo da resposta
+    res.json({
+        resultado: {
+            nivel,
+            risco: resultado.risco,
+            detalhesPilares: resultado.detalhesPilares
+        }
+    });
 };
+
 
 // Gerar PDF
 exports.gerarPDFRespostas = (req, res) => {
