@@ -26,14 +26,14 @@ export default function Home() {
 
           <button
             onClick={() => router.push("https://www.dponet.com.br/")}
-            className="mt-8 border border-white text-white font-medium px-6 py-3 md:text-lg md:px-6 md:py-5 rounded-full hover:bg-white hover:text-[#4A5FC1] transition duration-300"
+            className="mt-8 border border-white text-white font-medium px-6 py-3 md:text-lg md:px-6 md:py-5 rounded-full hover:bg-white hover:text-[#4A5FC1] transition duration-300 cursor-pointer"
           >
             Faça uma visita ao nosso site para saber mais
           </button>
 
           <button
             onClick={() => router.push("/questionario")}
-            className="mt-8 border border-white text-white font-medium px-6 py-3 md:text-lg md:px-6 md:py-4 rounded-full hover:bg-white hover:text-[#4A5FC1] transition duration-300"
+            className="mt-8 border border-white text-white font-medium px-6 py-3 md:text-lg md:px-6 md:py-4 rounded-full hover:bg-white hover:text-[#4A5FC1] transition duration-300 cursor-pointer"
           >
             Fazer Questionário
           </button>

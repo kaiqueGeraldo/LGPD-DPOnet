@@ -70,11 +70,13 @@ export default function Resultado() {
     if (!resultadoSalvo) return alert("Resultado não encontrado!");
 
     const resultado = JSON.parse(resultadoSalvo);
+    const token = localStorage.getItem("token"); // ou usar sua função obterToken()
 
     const response = await fetch(`${URL_BASE}/pdf`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`, // <-- Adicionado aqui
       },
       body: JSON.stringify({
         respostas: resultado.respostas.map((r: RespostaUsuario) => ({

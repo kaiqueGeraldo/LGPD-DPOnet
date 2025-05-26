@@ -237,7 +237,7 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
         <button
           onClick={handleResponder}
           disabled={!resposta}
-          className="mt-3 w-full px-6 py-3 bg-[#5c57f5] text-white font-bold rounded-xl transition duration-300 hover:bg-[#4844c2] disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-500"
+          className="mt-3 w-full px-6 py-3 bg-[#5c57f5] text-white font-bold rounded-xl transition duration-300 hover:bg-[#4844c2] disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-500 cursor-pointer"
         >
           Responder
         </button>
