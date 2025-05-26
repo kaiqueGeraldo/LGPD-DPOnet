@@ -71,7 +71,7 @@ export default function Resultado() {
 
     const resultado = JSON.parse(resultadoSalvo);
 
-    const response = await fetch(`${URL_BASE}/pdf`, {
+    const response = await fetch(`${URL_BASE}/api/pdf`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
