@@ -21,6 +21,11 @@ interface ResultadoData {
   nivel?: string;
 }
 
+interface RespostaUsuario {
+  pergunta_id: number;
+  resposta: string;
+}
+
 const coresRisco: { [key: string]: string } = {
   "Nenhuma deficiência": "bg-green-500",
   "Defasagem mínima": "bg-green-400",
@@ -72,7 +77,7 @@ export default function Resultado() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        respostas: resultado.respostas.map((r: any) => ({
+        respostas: resultado.respostas.map((r: RespostaUsuario) => ({
           pergunta_id: r.pergunta_id,
           resposta: r.resposta,
         })),
