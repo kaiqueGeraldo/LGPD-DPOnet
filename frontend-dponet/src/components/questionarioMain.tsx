@@ -145,6 +145,9 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
         removerToken();
         router.push("/resultado");
       } else {
+        if (data.token) {
+          salvarToken(data.token);
+        }
         setNumeroPergunta((prev) => prev + 1);
         setResposta(null);
         buscarPergunta();
