@@ -6,7 +6,7 @@ const perguntasRoutes = require('./routes/perguntasRouters');
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://lgpd-dponet-frontend.vercel.app",
   credentials: true
 }));
 
@@ -16,7 +16,11 @@ app.use(session({
   secret: 'chave-secreta',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: false, httpOnly: true, sameSite: "lax" }
+  cookie: {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'none'
+  }
 }));
 
 app.use('/api', perguntasRoutes);
