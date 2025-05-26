@@ -20,7 +20,7 @@ interface Pergunta {
 }
 
 const TOTAL_PERGUNTAS = 25;
-const URL_BASE = process.env.URL;
+const URL_BASE = process.env.NEXT_PUBLIC_URL;
 
 const PILARES: Record<number, string> = {
   1: "Governança",

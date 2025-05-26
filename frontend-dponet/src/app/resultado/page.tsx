@@ -52,7 +52,7 @@ export default function Resultado() {
   const [resultado, setResultado] = useState<ResultadoData | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [pilarSelecionado, setPilarSelecionado] = useState<string | null>(null);
-  const URL_BASE = process.env.URL;
+  const URL_BASE = process.env.NEXT_PUBLIC_URL;
 
   useEffect(() => {
     const resultadoSalvo = localStorage.getItem("resultadoFinal");
