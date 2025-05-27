@@ -6,7 +6,6 @@ import { Loader2 } from "lucide-react";
 import { CircularProgress } from "@mui/material";
 import clsx from "clsx";
 import { labels } from "@/utils/nivelLabels";
-import { URL_BASE } from "@/utils/url_base";
 
 interface PilarDetalhe {
   defasagem: number;
@@ -20,11 +19,6 @@ interface ResultadoData {
   risco: string;
   detalhesPilares: { [key: string]: PilarDetalhe };
   nivel?: string;
-}
-
-interface RespostaUsuario {
-  pergunta_id: number;
-  resposta: string;
 }
 
 const coresRisco: { [key: string]: string } = {
@@ -53,6 +47,7 @@ export default function Resultado() {
   const [resultado, setResultado] = useState<ResultadoData | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [pilarSelecionado, setPilarSelecionado] = useState<string | null>(null);
+  const URL_BASE = "http://localhost:3005/api";
 
   useEffect(() => {
     const resultadoSalvo = localStorage.getItem("resultadoFinal");
@@ -70,16 +65,14 @@ export default function Resultado() {
     if (!resultadoSalvo) return alert("Resultado não encontrado!");
 
     const resultado = JSON.parse(resultadoSalvo);
-    const token = localStorage.getItem("token"); // ou usar sua função obterToken()
 
     const response = await fetch(`${URL_BASE}/pdf`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`, // <-- Adicionado aqui
       },
       body: JSON.stringify({
-        respostas: resultado.respostas.map((r: RespostaUsuario) => ({
+        respostas: resultado.respostas.map((r: any) => ({
           pergunta_id: r.pergunta_id,
           resposta: r.resposta,
         })),

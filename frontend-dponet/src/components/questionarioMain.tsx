@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import { Box, LinearProgress, Typography } from "@mui/material";
 import { Loader2 } from "lucide-react";
 import { labels } from "@/utils/nivelLabels";
-import { obterToken, salvarToken, removerToken } from "@/utils/auth";
-import { URL_BASE } from "@/utils/url_base";
 
 interface Opcao {
   resposta: string;
@@ -22,6 +20,7 @@ interface Pergunta {
 }
 
 const TOTAL_PERGUNTAS = 25;
+const URL_BASE = "http://localhost:3005/api";
 
 const PILARES: Record<number, string> = {
   1: "Governança",
@@ -52,20 +51,13 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
   const iniciarQuestionario = async (nivelAtual: string) => {
     try {
-      const res = await fetch(`${URL_BASE}/iniciar`, {
+      await fetch(`${URL_BASE}/iniciar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify({ nivel: nivelAtual }),
       });
-
-      const data = await res.json();
-
-      if (data.token) {
-        salvarToken(data.token);
-        buscarPergunta();
-      } else {
-        console.error("Token não recebido");
-      }
+      buscarPergunta();
     } catch (err) {
       console.error("Erro ao iniciar questionário:", err);
     }
@@ -73,14 +65,10 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
   const buscarPergunta = async () => {
     try {
-      const token = obterToken();
       const res = await fetch(`${URL_BASE}/pergunta`, {
         method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        credentials: "include",
       });
-
       const data = await res.json();
       if (data.mensagem) {
         router.push("/resultado");
@@ -97,37 +85,32 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
 
   const handleResponder = async () => {
     if (!resposta || !pergunta) return;
-
     try {
-      const token = obterToken();
       const res = await fetch(`${URL_BASE}/responder`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+          Accept: "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({ resposta }),
       });
 
       const data = await res.json();
 
-      const novaResposta = {
-        pergunta_id: pergunta.id,
-        resposta: resposta,
-        pergunta: pergunta.pergunta,
-      };
-
-      setRespostas((prev) => [...prev, novaResposta]);
-
-      // Usa a lista atual + nova resposta
-      const respostasAtualizadas = [...respostas, novaResposta];
+      setRespostas((prev) => [
+        ...prev,
+        {
+          pergunta_id: pergunta.id,
+          resposta: resposta,
+          pergunta: pergunta.pergunta,
+        },
+      ]);
 
       if (data.mensagem === "Todas as perguntas foram respondidas!") {
         const resultadoRes = await fetch(`${URL_BASE}/resultado`, {
           method: "POST",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+          credentials: "include",
         });
         const resultadoData = await resultadoRes.json();
 
@@ -135,8 +118,8 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
           "resultadoFinal",
           JSON.stringify({
             ...resultadoData.resultado,
-            respostas: respostasAtualizadas,
-            perguntas: respostasAtualizadas.map((r) => ({
+            respostas,
+            perguntas: respostas.map((r) => ({
               id: r.pergunta_id,
               pergunta: r.pergunta,
             })),
@@ -144,12 +127,9 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
           })
         );
 
-        removerToken();
         router.push("/resultado");
+        return;
       } else {
-        if (data.token) {
-          salvarToken(data.token);
-        }
         setNumeroPergunta((prev) => prev + 1);
         setResposta(null);
         buscarPergunta();
@@ -237,7 +217,7 @@ export default function QuestionarioMain({ nivel }: { nivel: string }) {
         <button
           onClick={handleResponder}
           disabled={!resposta}
-          className="mt-3 w-full px-6 py-3 bg-[#5c57f5] text-white font-bold rounded-xl transition duration-300 hover:bg-[#4844c2] disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-500 cursor-pointer"
+          className="mt-3 w-full px-6 py-3 bg-[#5c57f5] text-white font-bold rounded-xl transition duration-300 hover:bg-[#4844c2] disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-500"
         >
           Responder
         </button>
